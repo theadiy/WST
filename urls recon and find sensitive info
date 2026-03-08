@@ -1,0 +1,24 @@
+TARGET = evil.com
+#katana urls
+katana -u $TARGET -jc -o katana-$TARGET.txt  
+
+#wayback urls
+echo $TARGET | waybackurls > wayback-$TARGET.txt   
+
+#gau urls
+gau $TARGET > gau-$TARGET.txt  
+
+#combine all urls into one list and deduplicate.
+cat katana-$TARGET.txt wayback-$TARGET.txt gau-$TARGET.txt | sort -u > all_urls-$TARGET.txt
+
+#check which urls are still alive and reachable
+cat all_urls-$TARGET.txt | httpx -mc 200 > all_urls_live-$TARGET.txt
+
+#filter .js files 
+cat all_urls_live-$TARGET.txt | grep "\.js$" > js-$TARGET.txt
+
+#mantra on js files
+cat js-$TARGET.txt | mantra  
+
+#mantra on all live urls
+cat all_urls_live-$TARGET.txt | mantra
