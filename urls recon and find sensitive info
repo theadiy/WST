@@ -1,4 +1,4 @@
-TARGET = evil.com
+TARGET="evil.com"
 #katana urls
 katana -u $TARGET -jc -o katana-$TARGET.txt  
 
