@@ -1,0 +1,17 @@
+nuclie
+katana
+mantra
+gau
+waybackurls
+tls check
+js files checks for senstive data(Manual)
+login sql bypass with SQLi payloads ' OR '1'='1/admin'--/' OR 1=1#
+login otp bypass
+login username enum
+rate limit on login 
+registration weak password
+registration account take over though same email 
+forgot password account takeover
+forgot password email bombing
+simple idor by copying admin url to normal user browser
+idor by exchanging admin session token with normal user session token for request which is only accessible for admin 
