@@ -20,5 +20,8 @@ xss
 html injection
 external dns interaction
 logout and check if any request still giving authenticated reponse
+secure flag 
+http only flag
+
 
 
