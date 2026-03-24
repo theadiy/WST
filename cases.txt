@@ -18,4 +18,7 @@ idor by exchanging admin session token with normal user session token for reques
 weak password policy
 xss
 html injection
+external dns interaction
+logout and check if any request still giving authenticated reponse
+
 
