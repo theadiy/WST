@@ -15,3 +15,7 @@ forgot password account takeover
 forgot password email bombing
 simple idor by copying admin url to normal user browser
 idor by exchanging admin session token with normal user session token for request which is only accessible for admin 
+weak password policy
+xss
+html injection
+
